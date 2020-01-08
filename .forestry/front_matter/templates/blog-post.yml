@@ -18,3 +18,5 @@ fields:
   - type: text
     name: name
     label: name
+pages:
+- content/test-title.md
