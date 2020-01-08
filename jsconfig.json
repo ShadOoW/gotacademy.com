@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "baseUrl": "./src",
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules", "dist", ".next"]
+}

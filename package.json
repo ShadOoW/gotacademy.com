@@ -1,0 +1,81 @@
+{
+  "name": "web-starter-kit",
+  "version": "1.0.0",
+  "description": "A starter kit based on NextJs",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "mobx": "^5.15.1",
+    "mobx-react": "^6.1.4",
+    "mobx-react-lite": "^1.5.2",
+    "netlify-cms": "^2.10.2",
+    "next": "^9.1.6",
+    "next-offline": "^5.0.0-beta.7",
+    "nookies": "^2.0.8",
+    "polished": "^3.4.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-smooth-image": "^1.1.0",
+    "styled-components": "^4.4.1",
+    "styled-system": "^5.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-centered": "^5.2.8",
+    "@storybook/addon-knobs": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@types/react": "^16.9.17",
+    "@types/styled-components": "^4.4.1",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "jest-fetch-mock": "^3.0.1",
+    "jest-styled-components": "^6.3.4",
+    "lint-staged": "^9.5.0",
+    "react-svg-loader": "^3.0.3"
+  },
+  "scripts": {
+    "dev": "node index.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node index.js",
+    "export": "next export",
+    "deploy": "npm run build && npm run export",
+    "lint": "eslint . --color",
+    "lint:fix": "eslint . --fix --color",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx}": [
+      "npm run --silent lint:fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "author": "Younes El Alami",
+  "license": "ISC"
+}
