@@ -9,8 +9,8 @@ fields:
   name: date
   label: date
 - type: field_group_list
-  name: cats
-  label: cats
+  name: content
+  label: content
   fields:
   - type: text
     name: description
